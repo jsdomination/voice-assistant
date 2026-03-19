@@ -13,7 +13,7 @@ from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, StateGraph
 from langgraph.prebuilt import ToolNode
 
-from models.modes import ModeDetails
+from config.modes import ModeDetails
 from tools.tool_creator import get_dynamic_tools
 from tools.tools import ALL_TOOLS
 from utils.nodes import agent_node, should_use_tools, transcribe_node

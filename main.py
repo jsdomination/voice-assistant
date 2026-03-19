@@ -9,7 +9,7 @@ import asyncio
 from audio.listener import AudioListener
 from audio.speaker import Speaker
 from graph.agent import build_graph
-from models.modes import MODES
+from config.modes import MODES
 from utils.runner import run_assistant
 
 
