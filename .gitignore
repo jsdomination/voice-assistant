@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Models (large binary files)
+models/
+
+# Dynamically created tools
+tools/custom/*.py
+!tools/custom/__init__.py
+
+# Runtime output
+saved_data.txt
+
+# Docker
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
