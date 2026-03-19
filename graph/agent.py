@@ -13,19 +13,19 @@ from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, StateGraph
 from langgraph.prebuilt import ToolNode
 
-from config.modes import ModeDetails
+from config.modes import ConfigurationProfile
 from tools.tool_creator import get_dynamic_tools
 from tools.tools import ALL_TOOLS
 from utils.nodes import agent_node, should_use_tools, transcribe_node
 from utils.state import AssistantState
 
 
-def build_graph(mode: ModeDetails, listener):
+def build_graph(mode: ConfigurationProfile, listener):
 	"""
 	Baut und kompiliert den LangGraph-Agenten.
 
 	Args:
-		mode:     ModeDetails (LLM model, Whisper config, …).
+		mode:     ConfigurationProfile (LLM model, Whisper config, …).
 		listener: AudioListener instance shared with the run loop
 		          (avoids loading Whisper twice).
 	"""

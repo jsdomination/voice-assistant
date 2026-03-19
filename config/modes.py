@@ -1,5 +1,5 @@
 """
-ModeDetails: Konfigurationsprofile für den Voice Assistant.
+ConfigurationProfile: Konfigurationsprofile für den Voice Assistant.
 """
 
 from abc import ABC, abstractmethod
@@ -7,7 +7,7 @@ from dataclasses import dataclass
 
 
 @dataclass
-class ModeDetails(ABC):
+class ConfigurationProfile(ABC):
     """Abstract base for assistant operation modes."""
 
     @property
@@ -38,7 +38,7 @@ class ModeDetails(ABC):
 
 
 @dataclass
-class AccurateMode(ModeDetails):
+class AccurateMode(ConfigurationProfile):
     """High-quality: larger Whisper model, smarter LLM, beam search."""
 
     name: str = "accurate"
@@ -50,7 +50,7 @@ class AccurateMode(ModeDetails):
 
 
 @dataclass
-class FastMode(ModeDetails):
+class FastMode(ConfigurationProfile):
     """Low-latency: small Whisper model, lighter LLM, greedy decode."""
 
     name: str = "fast"
@@ -61,7 +61,7 @@ class FastMode(ModeDetails):
     temperature: float = 0.1
 
 
-MODES: dict[str, type[ModeDetails]] = {
+MODES: dict[str, type[ConfigurationProfile]] = {
     "accurate": AccurateMode,
     "fast": FastMode,
 }
