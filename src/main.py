@@ -8,8 +8,8 @@ import asyncio
 
 from audio.listener import AudioListener
 from audio.speaker import Speaker
-from graph.agent import build_graph
 from config.modes import MODES
+from graph.agent import build_graph
 from utils.runner import run_assistant
 
 
